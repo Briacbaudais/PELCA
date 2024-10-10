@@ -46,7 +46,9 @@ jobs:
         run: poetry install --no-interaction --no-root
 
       - name: Install library
-        run: poetry install --no-interaction
+        run: | 
+            poetry install --no-interaction
+            pip install customtkinter
 
       - name: Run tests
         run: |
